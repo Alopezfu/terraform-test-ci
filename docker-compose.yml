@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  terraform:
+    container_name: 'terraform'
+    image: 'hashicorp/terraform:1.9.2'
+    command: '-chdir=/code init'
+    volumes:
+      - './code:/code'
